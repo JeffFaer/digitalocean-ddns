@@ -1,0 +1,22 @@
+name: "DigitalOcean Dynamic DNS"
+description: "A container that uses DigitalOcean as a dynamic DNS instead of DuckDNS"
+url: "https://github.com/JeffFaer/digitalocean-ddns"
+version: "0.1.0"
+slug: "digitalocean_ddns"
+init: false
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+options:
+  domain: "example.com"
+  name: "home"
+  digitalocean_token: "personal access token"
+  sleep_interval: 60
+schema:
+  domain: str
+  name: str
+  digitalocean_token: str
+  sleep_interval: int?
