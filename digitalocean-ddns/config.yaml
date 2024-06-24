@@ -1,7 +1,7 @@
 name: "DigitalOcean Dynamic DNS"
 description: "A container that uses DigitalOcean as a dynamic DNS instead of DuckDNS"
 url: "https://github.com/JeffFaer/digitalocean-ddns"
-version: "0.1.0"
+version: "0.1.1"
 slug: "digitalocean_ddns"
 init: false
 arch:
