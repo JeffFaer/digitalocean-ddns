@@ -71,6 +71,12 @@ run() {
         return 1
     fi
 
+    if [[ -v old_addr && "${old_addr}" == "${addr}" ]]; then
+        debug "IP address has not changed."
+        return
+    fi
+    old_addr="${addr}"
+
     local record
     if ! record="$(api_curl -X GET "${API}?type=A&name=${NAME}.${DOMAIN}" \
         | jq ".domain_records[0] // empty")"; then
